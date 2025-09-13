@@ -48,11 +48,11 @@ Untuk menjalankan proyek ini secara lokal, ikuti langkah-langkah berikut:
 
 Clone repositori ini:
 
-git clone [https://github.com/NAMA_USER_KAMU/NAMA_REPO_KAMU.git](https://github.com/NAMA_USER_KAMU/NAMA_REPO_KAMU.git)
+git clone https://github.com/KalvinAngelitoAng/bookshelf-web.git
 
 Buka direktori proyek:
 
-cd NAMA_REPO_KAMU
+cd bookshelf-web
 
 Buka file index.html di browser favorit Anda.
 Tidak ada dependensi atau proses build yang diperlukan, semua berjalan langsung di browser.
@@ -69,4 +69,4 @@ Proyek ini dilisensikan di bawah MIT License.
 🙏 Ucapan Terima Kasih
 Dicoding Indonesia atas kurikulum dan starter project yang disediakan.
 
-Seluruh tim pengajar dan reviewer di kelas "Belajar Membuat Front-End Web untuk Pemula".
+Seluruh tim pengajar dan reviewer di Dicoding Indonesia.
