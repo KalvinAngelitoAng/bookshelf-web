@@ -1,0 +1,249 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --background-color: #f4f7f6;
+  --card-background: #ffffff;
+  --text-color: #34495e;
+  --border-color: #dfe6e9;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+  --success-color: #2ecc71;
+  --danger-color: #e74c3c;
+  --warning-color: #f39c12;
+  --font-family: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  background: var(--primary-color);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 5px solid var(--secondary-color);
+}
+
+.header h1 {
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+}
+
+main {
+  padding: 20px 0;
+}
+
+.main-layout {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 25px;
+}
+
+.card {
+  background-color: var(--card-background);
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.card h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: var(--font-family);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-check input[type="checkbox"] {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+}
+
+.form-check label {
+  font-weight: 500;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: var(--font-family);
+  transition: background-color 0.3s, transform 0.2s;
+  color: white;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+#bookForm button, #searchBook button {
+  background-color: var(--secondary-color);
+  width: 100%;
+}
+#bookForm button:hover, #searchBook button:hover {
+  background-color: #2980b9;
+}
+
+#bookForm button span {
+  font-weight: bold;
+}
+
+.bookshelf {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  min-height: 100px;
+}
+
+.book_item {
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+.book_item h3 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.book_item p {
+  margin-bottom: 8px;
+  flex-grow: 1;
+}
+
+.book_item .action {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.action button {
+  font-size: 1.1rem;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action .green {
+  background-color: var(--success-color);
+}
+.action .green:hover {
+  background-color: #27ae60;
+}
+
+.action .red {
+  background-color: var(--danger-color);
+}
+.action .red:hover {
+  background-color: #c0392b;
+}
+
+.action .yellow {
+  background-color: var(--warning-color);
+}
+.action .yellow:hover {
+  background-color: #d68910;
+}
+
+.modal {
+  display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.5);
+}
+.modal-content {
+  background-color: #fefefe; margin: 10% auto; padding: 30px; border: 1px solid #888; width: 80%; max-width: 500px; border-radius: 8px; position: relative; animation: slide-down 0.4s ease-out;
+}
+@keyframes slide-down { from { transform: translateY(-50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+.close-button {
+  color: #aaa; float: right; font-size: 28px; font-weight: bold;
+}
+.close-button:hover, .close-button:focus {
+  color: black; text-decoration: none; cursor: pointer;
+}
+#editBookForm button {
+  background-color: var(--primary-color); width: 100%; margin-top: 10px;
+}
+#editBookForm button:hover {
+  background-color: #22303f;
+}
+
+footer {
+  text-align: center; padding: 20px; margin-top: 30px; color: #7f8c8d; font-size: 0.9rem;
+}
+
+@media (max-width: 992px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
